@@ -22,7 +22,10 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
-        "drush/drush": "^10.2"
+        "drupal/devel": "^4.0",
+        "drupal/devel_kint_extras": "^1.0",
+        "drush/drush": "^10.2",
+        "kint-php/kint": "^3.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -85,5 +88,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/twig_xdebug": "^1.2"
     }
 }
