@@ -162,3 +162,10 @@ if (PHP_SAPI !== 'cli') {
 		$_SERVER['SERVER_PORT'] = 443;
 	}
 }
+
+// Change kint maxLevels setting:
+include_once(DRUPAL_ROOT . '/modules/contrib/devel/kint/kint/Kint.class.php');
+if (class_exists('Kint')){
+  // Set the maxlevels to prevent out-of-memory. Currently there doesn't seem to be a cleaner way to set this:
+  Kint::$maxLevels = 4;
+}
